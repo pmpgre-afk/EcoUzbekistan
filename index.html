@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>Eco Travel Uzbekistan - Home</title>
+<style>
+/* BODY & GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f5e8;
+    scroll-behavior: smooth;
+}
+
+/* HERO SECTION */
+header {
+    background: url('https://uzbekistan.travel/storage/app/uploads/public/680/0d5/589/thumb_4780_1920_0_0_0_auto.webp') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+header h1 {
+    position: relative;
+    font-size: 3.5em;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+header p {
+    position: relative;
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: white;
+}
+
+/* GRID LAYOUT FOR DESTINATIONS */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* CARD DESIGN */
+.destination-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.destination-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+.destination-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.destination-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.85);
+}
+.destination-card figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+    background: rgba(0,0,0,0.6);
+    padding: 5px 10px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.destination-card:hover figcaption {
+    opacity: 1;
+}
+.destination-card h3 {
+    margin: 10px;
+    color: #2e7d32;
+}
+.destination-card p {
+    margin: 10px;
+    color: #4e4e4e;
+}
+
+/* SECTION STYLING */
+section {
+    padding: 50px 20px;
+    background: linear-gradient(145deg, #ffffff, #d0f0c0);
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease;
+}
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* INPUTS & BUTTONS */
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+button {
+    background: linear-gradient(90deg, #2e7d32, #66bb6a);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* PROGRESS BAR */
+#carbonBarContainer {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 12px;
+    margin-top: 15px;
+    height: 30px;
+}
+#carbonBar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #2e7d32, #a5d6a7);
+    border-radius: 12px;
+    text-align: right;
+    line-height: 30px;
+    color: white;
+    padding-right: 10px;
+    font-weight: bold;
+    transition: width 0.6s ease, background 0.6s ease;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header h1 { font-size: 2.5em; }
+    header p { font-size: 1.2em; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🌱 Eco Travel Uzbekistan</h1>
+    <p>Ekologik toza va mas'uliyatli sayohat platformasi</p>
+</header>
+
+<section>
+    <h2>📍 O'zbekistondagi asosiy ekologik turizm maskanlari</h2>
+  <a href="chorvoq.html" class="card-link">
+    <div class="destination-card">
+      <img src="https://avatars.mds.yandex.net/i?id=92cc6f65769a7eb3806d827bd06c42d084a66c47-10124655-images-thumbs&n=13.jpg" alt="Chorvoq">
+      <h3>Chorvoq ko‘li</h3>
+      <p>Toshkent viloyatidagi dam olish maskani</p>
+    </div>
+  </a>
+
+  <a href="zaamin.html" class="card-link">
+    <div class="destination-card">
+      <img src="https://avatars.mds.yandex.net/i?id=de95a3656709df3679aefe41ea848dc41d0c5832-6951086-images-thumbs&n=13.jpg" alt="Zomin">
+      <h3>Zomin milliy bog‘i</h3>
+      <p>Jizzax viloyatidagi tabiat qo‘riqxonasi</p>
+    </div>
+  </a>
+
+  <a href="chashma.html" class="card-link">
+    <div class="destination-card">
+      <img src="https://avatars.mds.yandex.net/i?id=02ee2dc0cb9f1c0a911b75a78432293a474fcb07-5490649-images-thumbs&n=13.jpg" alt="Chashma">
+      <h3>Chashma sharsharasi</h3>
+      <p>Farg‘ona viloyatidagi ekologik maskan</p>
+    </div>
+  </a>
+
+</div>
+<section>
+  <h2>🗺️ O‘zbekistondagi asosiy ekologik turizm viloyatlari</h2>
+<div class="destinations-grid">
+
+  <a href="toshkent.html" class="card-link">
+    <div class="destination-card">
+      <img src="https://cdn.xabardor.uz/media/photo/2024/08/19/news_photo-20240906-112848.webp">
+      <div class="card-content">
+        <h3>Toshkent viloyati</h3>
+        <p>Chorvoq ko'li va tog‘li dam olish maskanlari</p>
+      </div>
+    </div>
+  </a>
+
+  <a href="jizzax.html" class="card-link">
+    <div class="destination-card">
+      <img src="https://avatars.mds.yandex.net/i?id=5eeb1e94e9ead18ef668dbec40ae3e184d87ec1b-5877412-images-thumbs&n=13.jpg">
+      <div class="card-content">
+        <h3>Jizzax viloyati</h3>
+        <p>Zomin milliy bog‘i va tog‘ manzaralari</p>
+      </div>
+    </div>
+  </a>
+
+  <a href="fargona.html" class="card-link">
+    <div class="destination-card">
+      <img src="https://otvet.imgsmail.ru/download/u_88c73da23ea94c9abdf06fd66c786a5e_800.jpg">
+      <div class="card-content">
+        <h3>Farg‘ona viloyati</h3>
+        <p>Sharsharalar va ekologik dam olish joylari</p>
+      </div>
+    </div>
+  </a>
+
+  <a href="samarqand.html" class="card-link">
+    <div class="destination-card">
+      <img src="https://avatars.mds.yandex.net/i?id=7bfc8f267da1b2d18ecc7173eb9bb147f387daf3-8312133-images-thumbs&n=13.jpg">
+      <div class="card-content">
+        <h3>Samarqand viloyati</h3>
+        <p>Tabiat va tarix uyg‘unlashgan maskanlar</p>
+      </div>
+    </div>
+  </a>
+
+  <a href="buxoro.html" class="card-link">
+    <div class="destination-card">
+      <img src="https://www.gazeta.uz/media/img/2018/04/68uup015251095208889_b.jpg?r=1525153915.jpg">
+      <div class="card-content">
+        <h3>Buxoro viloyati</h3>
+        <p>Sahro va ekologik sayohat maskanlari</p>
+      </div>
+    </div>
+  </a>
+
+</div>
+</section>
+
+  <h2>🌿 Ekologik maslahatlar</h2>
+  <ul>
+    <li>Sayohat qilishda plastmassadan foydalanishni kamaytiring</li>
+    <li>Tabiatni ifloslantirmang</li>
+    <li>Mahalliy transportni afzal ko‘ring</li>
+  </ul>
+</section>
+
+<section>
+<div class="card">
+  <h3>🚗 CO2 Kalkulyator</h3>
+
+  <input type="number" id="distance" placeholder="Masofa (km)">
+  <input type="number" id="people" placeholder="Necha kishi">
+
+  <select id="transport">
+    <option value="0.2">Avtomobil</option>
+    <option value="0.1">Avtobus</option>
+    <option value="0.05">Poyezd</option>
+    <option value="0.25">Samolyot</option>
+  </select>
+
+  <button onclick="calculateCO2()">Hisoblash</button>
+
+  <div id="co2result" class="result-box"></div>
+</div>
+</section>
+
+<section>
+  <h2>📚 Blog va maslahatlar</h2>
+  <article>
+    <h3>Ekologik sayohatning afzalliklari</h3>
+    <p>Tabiatni himoya qilgan holda sayohat qilish inson va atrof-muhitga foyda keltiradi.</p>
+  </article>
+  <form onsubmit="submitFeedback(event)">
+    <input type="text" placeholder="Ismingiz" required>
+    <textarea placeholder="Fikringiz" required></textarea>
+    <button type="submit">Yuborish</button>
+  </form>
+</section>
+
+<section>
+  <h2>📍 Biz haqimizda</h2>
+  <p>Eco Travel Uzbekistan – ekologik mas’uliyatli sayohat platformasi.</p>
+     <h3>📞 Bog‘lanish</h2>
+    <p>Email: ecotraveluzbekistan@gmail.com</p>
+    <p>Telefon: +998 90 035 10 82</p>
+</section>
+
+<footer>
+    © 2026 Eco Travel Uzbekistan
+</footer>
+
+<script>
+
+function calculateCO2(){
+  let distance = document.getElementById("distance").value;
+  let people = document.getElementById("people").value;
+  let transport = document.getElementById("transport").value;
+
+  if(distance=="" || distance<=0 || people=="" || people<=0){
+    alert("Iltimos, masofa va odam sonini kiriting!");
+    return;
+  }
+
+  let co2 = distance * transport * people;
+  document.getElementById("co2result").style.display = "block";
+  document.getElementById("co2result").innerHTML = `
+    <h4>🌍 CO2 Hisobi</h4>
+    <p>🚗 Transport turi: ${document.getElementById("transport").selectedOptions[0].text}</p>
+    <p>🛣 Masofa: ${distance} km</p>
+    <p>👥 Odam: ${people}</p>
+    <p>💨 CO2 chiqarilgan: ${co2.toFixed(2)} kg</p>
+  `;
+}
+
+
+function submitFeedback(event){
+    event.preventDefault();
+    alert("Rahmat, fikringiz qabul qilindi!");
+}
+</script>

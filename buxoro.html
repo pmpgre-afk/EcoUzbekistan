@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>Buxoro viloyati</title>
+<style>
+body {
+  font-family:'Segoe UI', sans-serif;
+  background:#f4f9f4;
+  margin:0;
+}
+
+/* NAVBAR */
+nav {
+  background:#2e7d32;
+  padding:15px;
+  text-align:center;
+}
+
+nav a {
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* TITLE */
+h2 {
+  text-align:center;
+  margin-top:20px;
+  color:#2e7d32;
+}
+
+/* CARD */
+.card {
+  background:white;
+  padding:20px;
+  margin:20px auto;
+  max-width:500px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:scale(1.03);
+}
+
+/* IMAGE */
+.card img {
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+/* FORM */
+.card input, .card select {
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+.card button {
+  width:100%;
+  padding:12px;
+  background:#2e7d32;
+  color:white;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Bosh sahifa</a>
+</nav>
+
+<h2>🌿 Buxoro viloyati ekologik maskanlari</h2>
+
+<div class="card">
+  <img src="https://avatars.mds.yandex.net/i?id=7d3913b162d315aabc649cf002cb49a43e1cc013-5227935-images-thumbs&n=13.jpg">
+  <h3>🏜️ Qizilqum sahrosi</h3>
+  <p>Masofa: 450 km</p>
+
+  <input type="text" id="name1">
+  <input type="date" id="date1">
+  <input type="number" id="people1">
+
+  <select id="transport1">
+    <option value="1000">Poyezd</option>
+    <option value="1500">Avtobus</option>
+    <option value="2000">Avtomobil</option>
+  </select>
+
+  <button onclick="hisobla(450,'name1','date1','people1','transport1','result1')">Bron qilish</button>
+
+  <div id="result1" class="result-box"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
